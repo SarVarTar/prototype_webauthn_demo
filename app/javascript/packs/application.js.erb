@@ -8,8 +8,9 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-// require('cbor')
-// require('webauthn_prototype')
+
+import 'bootstrap'
+import './src/application.scss'
 
 import "<%= File.join(Gem.loaded_specs['prototype_webauthn'].full_gem_path, 'vendor', 'assets', 'javascripts', 'webauthn_prototype.js') %>";
 import "<%= File.join(Gem.loaded_specs['prototype_webauthn'].full_gem_path, 'vendor', 'assets', 'javascripts', 'cbor.js') %>";
