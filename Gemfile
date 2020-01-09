@@ -47,7 +47,7 @@ gem 'mocha'
 gem 'simple_form'
 gem 'tomdoc'
 gem 'cose'
-gem "prototype_webauthn", path: "~/Schreibtisch/Ruby"
+gem "prototype_webauthn", :git => "git://github.com/SarVarTar/prototype-webauthn-ruby.git"
 #gem 'bootstrap-sass'
 #gem 'jquery-rails'
 gem 'webpacker'
