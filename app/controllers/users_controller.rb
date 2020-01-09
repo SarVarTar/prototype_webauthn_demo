@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     end
     # this is to be supplied by server
     rp_name = 'WebauthnPrototype'#your service name
-    rp_domain = 'ursprungszierde.hob'#your Top Level Domain
+    rp_domain = 'localhost:3000'#your Top Level Domain
     response_path = webauthn_decode_path
 
     # id, email and challenge need to be saved for later use
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   end
   # Part 2:
   def decode_webauthn_response
-    rp_domain = 'ursprungszierde.hob'#your Top Level Domain
+    rp_domain = 'localhost:3000'#your Top Level Domain
     origin = request.headers['origin'].nil? ? ('https://'+request.headers['Host']) : request.headers['origin'] #origin retrieval differs by browser. Chrome and Firefox are accounted for.
     response_data = PrototypeWebauthn::Creation.decode_response(params[:webauthn_response], session[:challenge], origin, rp_domain)
     if(response_data[:valid])
