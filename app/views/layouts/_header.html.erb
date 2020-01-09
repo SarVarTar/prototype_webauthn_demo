@@ -1,0 +1,13 @@
+<header class='navbar justify-content-between'>
+  <div>Web Authentication Dummy Page</div>
+   <% if current_user %>
+      <!-- current_user will return true if a user is logged in -->
+      <%= "Logged in as #{current_user.email}" %> |
+      <%= link_to 'Home', root_path %> |
+      <%= link_to 'User Index', users_path %>
+      <%= link_to 'Log Out', logout_path, method: :delete %>
+    <% else %>
+      <!-- not logged in -->
+      <%= link_to 'Home', root_path %> | <%= link_to 'Log In', new_webauthn_session_path %> or <%= link_to 'Sign Up', new_webauthn_path %>
+    <% end %>
+</header>

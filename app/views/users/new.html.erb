@@ -1,0 +1,32 @@
+<h1>Sign up with password</h1>
+
+<div class='container'>
+<%= form_for @user do |f| %>
+  <div class='form-group'>
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => 'form-control' %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <%= f.submit "Sign up!", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<div class='buffer'></div>
+  <div class="d-flex">
+    <div class=" border border-left-0 border-right-0 flex-grow-1"></div>
+    <div class="line-0">or</div>
+    <div class=" border border-left-0 border-right-0 flex-grow-1"></div>
+  </div>
+  <div class='buffer'></div>
+</div>
+
+<%= link_to 'Sign Up with webauthn', new_webauthn_path, :class => 'btn btn-primary' %>

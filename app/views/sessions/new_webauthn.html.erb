@@ -1,0 +1,28 @@
+<h1>Login with Webauthn</h1>
+<div class='container'>
+<%= form_for @user, url: new_webauthn_session_path, remote: true do |f| %>
+  <div class='form-group'>
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <%= f.submit "Login", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>
+
+<div class='buffer'></div>
+  <div class="d-flex">
+    <div class=" border border-left-0 border-right-0 flex-grow-1"></div>
+    <div class="line-0">or</div>
+    <div class=" border border-left-0 border-right-0 flex-grow-1"></div>
+  </div>
+  <div class='buffer'></div>
+  <%= link_to 'Login with Password', login_path, :class => 'btn btn-primary' %>
+</div>
+
+<%= form_for @user, url: test_path, remote: true do |f| %>
+  <div class='form-group'>
+    <%= f.submit "test Javascript", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
