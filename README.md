@@ -53,3 +53,12 @@ This tells us that the nameserver uses hopp to resolve hostnames. So adding
 config.hosts << 'bunny.hopp'
 ```
 to your development.rb should make bunny.hopp:3000 available for all devices on the network.
+
+Now you need to make following change to ```users_controller```
+```ruby
+class UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token, :only => [:decode_webauthn_response]
+
+  @@rp_domain = 'bunny.hopp'
+```
+and the demo will be ready to test
