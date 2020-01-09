@@ -7,28 +7,17 @@ First create a new empty rails application
 ```
 $ rails new demo_app
 ```
-Download the files and copy them into your created demo_app folder overwriting files.\
-Download webauthn_prototype_ruby gem and install according to instructions.\
-In your Gemfile.rb change:
-```ruby
-gem "prototype_webauthn", path: "~/change/this"
-```
-to
-```ruby
-gem "prototype_webauthn", path: "path/to/webauthn_prototype"
-```
+Download the files and copy them into your created demo_app folder overwriting files.
+
 Install the webpacker erb extension.
 ```
 $ rails webpacker:install:erb
 ```
-
+Install Bootstrap and dependencies
+```
+$ yarn add bootstrap jquery popper.js
+```
 update your installed gems using bundler.
 ```
-$ bundle
+$ bundle update
 ```
-Since Web Authentication needs a secure channel you need to enable SSL in your local environment to test the app.
-```
-
-```
-
-
