@@ -61,4 +61,7 @@ class UsersController < ApplicationController
 
   @@rp_domain = 'bunny.hopp'
 ```
-and the demo will be ready to test
+You should be able to open the demowebsite from any device on the network now.\
+Sadly Web Authentication needs a secure channel to expose it's functions. So we still need to set up SSL.\
+To do that follow these instructions: https://rossta.net/blog/local-ssl-for-rails-5.html \
+The project should work correctly now.
